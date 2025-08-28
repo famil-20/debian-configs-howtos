@@ -236,7 +236,7 @@ fi
  
 # some more ls aliases
 alias ll='ls -l'
-alias la='ls -A'
+alias la='ls -A1'
 alias l='ls -CF'
  
 # enable auto-suggestions based on the history
@@ -253,7 +253,7 @@ fi
 
 # CUSTOM THINGS
 
-alias startup_update='~/debian/scripts/startup.sh'
+alias a='~/debian/scripts/startup.sh'
 alias connect_mouse='~/debian/scripts/connect_mouse.sh'
 alias search_history='_search_history() {history | grep "$1"}; _search_history'
 
