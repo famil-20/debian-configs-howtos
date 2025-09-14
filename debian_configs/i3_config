@@ -192,4 +192,4 @@ bar {
 
 exec --no-startup-id xfsettingsd --replace
 exec --no-startup-id xsetroot -solid black
-
+exec_always --no-startup-id sh -c 'pgrep -x xfce4-clipman >/dev/null || (sleep 1; xfce4-clipman --daemon)'
