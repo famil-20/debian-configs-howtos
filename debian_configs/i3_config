@@ -77,7 +77,7 @@ bindsym $mod+Right focus right
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
+bindsym $mod+Shift+l mo/e up
 bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
@@ -206,3 +206,6 @@ mode "$mode_system" {
 }
 
 bindsym $mod+y mode "$mode_system"
+bindsym Mod4+v exec --no-startup-id xfce4-popup-clipman 
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
