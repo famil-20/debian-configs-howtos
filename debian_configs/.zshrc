@@ -257,6 +257,8 @@ alias a='~/debian/scripts/startup.sh'
 alias connect_mouse='~/debian/scripts/connect_mouse.sh'
 alias search_history='_search_history() {history | grep "$1"}; _search_history'
 
+alias vim=nvim
+
 export PATH="$HOME/android-studio/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
