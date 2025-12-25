@@ -256,6 +256,7 @@ fi
 alias a='~/debian/scripts/startup.sh'
 alias connect_mouse='~/debian/scripts/connect_mouse.sh'
 alias search_history='_search_history() {history | grep "$1"}; _search_history'
+alias check_size='du -cha --max-depth=1 ./ | grep -E "M|G" | sort -h'
 
 alias vim=nvim
 
