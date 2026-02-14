@@ -262,6 +262,7 @@ alias search_current_dir='_search_current_dir() {grep -RIn -C 0 --text "$1" ./};
 alias vim=nvim
 
 export PATH="$HOME/android-studio/bin:$PATH"
+export PATH="$HOME/Qt/6.10.1/gcc_64/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
