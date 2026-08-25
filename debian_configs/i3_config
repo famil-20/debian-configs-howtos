@@ -77,7 +77,7 @@ bindsym $mod+Right focus right
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l mo/e up
+bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
@@ -192,6 +192,7 @@ bar {
 
 exec --no-startup-id xfsettingsd --replace
 exec --no-startup-id xsetroot -solid black
+exec_always --no-startup-id setxkbmap -layout us,az -option grp:win_space_toggle
 exec_always --no-startup-id sh -c 'pgrep -x xfce4-clipman >/dev/null || (sleep 1; xfce4-clipman --daemon)'
 
 set $mode_system System (l) , (e) logout, (r) reboot, (Shift+s) shutdown
@@ -206,6 +207,6 @@ mode "$mode_system" {
 }
 
 bindsym $mod+y mode "$mode_system"
-bindsym Mod4+v exec --no-startup-id xfce4-popup-clipman 
+bindsym Mod4 + v exec --no-startup-id xfce4-popup-clipman 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev

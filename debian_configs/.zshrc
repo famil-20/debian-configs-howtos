@@ -255,15 +255,25 @@ fi
 
 alias a='~/debian/scripts/startup.sh'
 alias connect_mouse='~/debian/scripts/connect_mouse.sh'
-alias search_history='_search_history() {history | grep "$1"}; _search_history'
+alias searchhistory='_search_history() {history | grep "$1"}; _search_history'
 alias check_size='du -cha --max-depth=1 ./ | grep -E "M|G" | sort -h'
-alias search_current_dir='_search_current_dir() {grep -RIn -C 0 --text "$1" ./}; _search_current_dir'
+alias searchcurrentdir='_search_current_dir() {grep -RIn -C 0 --text "$1" ./}; _search_current_dir'
+
+alias clean_docker_shit='docker system prune'
+alias clean_docker_all_images='_clean_docker_all_images() { docker rmi -f $(docker images -aq); }; _clean_docker_all_images'
+alias clean_docker_all_volumes='_clean_docker_all_volumes() { docker rm -vf $(docker ps -aq); }; _clean_docker_all_volumes'
 
 alias vim=nvim
 
-export PATH="$HOME/android-studio/bin:$PATH"
-export PATH="$HOME/Qt/6.10.1/gcc_64/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/famil/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
