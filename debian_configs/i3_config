@@ -210,3 +210,6 @@ bindsym $mod+y mode "$mode_system"
 bindsym Mod4 + v exec --no-startup-id xfce4-popup-clipman 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
+
+
+exec_always --no-startup-id xfce4-power-manager
