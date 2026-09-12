@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} b below.
@@ -192,7 +192,7 @@ bar {
 
 exec --no-startup-id xfsettingsd --replace
 exec --no-startup-id xsetroot -solid black
-exec_always --no-startup-id setxkbmap -layout us,az -option grp:win_space_toggle
+exec_always --no-startup-id setxkbmap -layout us,az -option grp:alt_shift_toggle
 exec_always --no-startup-id sh -c 'pgrep -x xfce4-clipman >/dev/null || (sleep 1; xfce4-clipman --daemon)'
 
 set $mode_system System (l) , (e) logout, (r) reboot, (Shift+s) shutdown
@@ -207,9 +207,9 @@ mode "$mode_system" {
 }
 
 bindsym $mod+y mode "$mode_system"
-bindsym Mod4 + v exec --no-startup-id xfce4-popup-clipman 
+bindsym $mod + Shift + v exec --no-startup-id xfce4-popup-clipman 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
-
+bindsym $mod + z exec --no-startup-id boomer
 
 exec_always --no-startup-id xfce4-power-manager

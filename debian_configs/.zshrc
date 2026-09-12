@@ -277,3 +277,11 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# nim
+export PATH=/home/famil/.nimble/bin:$PATH
+# nim end
+
+#boomer
+export PATH=/home/famil/Programs/boomer:$PATH
+#boomer end
