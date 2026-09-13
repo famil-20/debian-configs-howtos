@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 declare -A DEVICES
 DEVICES["1"]="Microsoft Bluetooth Mouse"

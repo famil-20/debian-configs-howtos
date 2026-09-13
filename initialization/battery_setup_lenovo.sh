@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 sudo apt-get install tlp tlp-rdw
 sudo tlp start

@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/env bash
 
 sudo apt-get install i3

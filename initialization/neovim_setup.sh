@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 sudo apt update
 sudo apt install make gcc ripgrep unzip git xclip curl fonts-noto-color-emoji fd-find
