@@ -263,7 +263,6 @@ alias searchcurrentdir='_search_current_dir() {grep -RIn -C 0 --text "$1" ./}; _
 alias clean_docker_shit='docker system prune'
 alias clean_docker_all_images='_clean_docker_all_images() { docker rmi -f $(docker images -aq); }; _clean_docker_all_images'
 alias clean_docker_all_volumes='_clean_docker_all_volumes() { docker rm -vf $(docker ps -aq); }; _clean_docker_all_volumes'
-
 alias vim=nvim
 
 
