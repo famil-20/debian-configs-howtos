@@ -12,3 +12,16 @@ cd xkblayout-state
 make
 ```
 
+# To have theme, icon etc. settings managed, we installed following and just set it up. We don't use any daemon and applicaitons actually read settings.ini themselves
+`sudo apt install lxappearance`
+
+# We use xrandr to set display settings
+Just run `xrandr` alone to see what's available and what's current
+Thenrun something as follows to set the settings:
+`xrandr --output HDMI-1 --mode 2560x1440 --rate 120 --output eDP-1 --off`
+
+# How to set auto detection for display settings
+Install `autorandr`
+Use `autorandr --save <name of config>` to save profile
+If it doesn't switch automatically when unplugging/plugging in external display, run `autorandr --change`
+
