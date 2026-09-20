@@ -192,12 +192,9 @@ bar {
 
 
 exec --no-startup-id xsetroot -solid black
-exec_always --no-startup-id setxkbmap -layout us,az -option grp:shifts_toggle
+exec_always --no-startup-id setxkbmap -layout us,az -option grp:shifts_toggle -option altwin:swap_alt_win
 exec_always --no-startup-id sh -c 'pgrep -x xfce4-clipman >/dev/null || (sleep 1; xfce4-clipman --daemon)'
 exec_always --no-startup-id xfce4-power-manager
-
-# Swap LEFT_ALT and SUPER keys (a.k.a. Windows key)
-exec_always --no-startup-id setxkbmap -option altwin:swap_alt_win
 
 set $mode_system System (l) , (e) logout, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -215,4 +212,4 @@ bindsym $mod + Shift + v exec --no-startup-id xfce4-popup-clipman
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 bindsym $mod + z exec --no-startup-id boomer
-
+bindsym $mod+shift+s exec --no-startup-id xfce4-screenshooter -r

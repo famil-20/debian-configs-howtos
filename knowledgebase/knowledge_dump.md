@@ -25,3 +25,15 @@ Install `autorandr`
 Use `autorandr --save <name of config>` to save profile
 If it doesn't switch automatically when unplugging/plugging in external display, run `autorandr --change`
 
+# How to put dark stuff in login screen
+Go to `/etc/lightdm/lightdm-gtk-greeter.conf`
+Edit following lines, and we good
+```
+[greeter]
+background=#000000
+#user-background=
+theme-name=Adwaita-dark
+#icon-theme-name=
+```
+
+
