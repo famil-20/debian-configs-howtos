@@ -36,4 +36,5 @@ theme-name=Adwaita-dark
 #icon-theme-name=
 ```
 
-
+# How to enable nvidia properly
+Just follow https://wiki.debian.org/NvidiaGraphicsDrivers
